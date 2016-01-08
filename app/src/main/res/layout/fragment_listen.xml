@@ -1,0 +1,67 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.i.should.what.whatshouldi.MoviesPackage.WatchFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listenMainRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.dd.ShadowLayout
+        android:id="@+id/listenTabsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="-2dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginRight="-2dp"
+        android:layout_marginEnd="-2dp"
+
+        app:sl_cornerRadius="1dp"
+        app:sl_dx="0dp"
+        app:sl_dy="0dp"
+        app:sl_shadowColor="#88000000"
+        app:sl_shadowRadius="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/showArtistButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:text="bands" />
+
+            <Button
+                android:id="@+id/showNewAlbumsButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:text="new albums" />
+
+            <Button
+                android:id="@+id/showListeningButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:text="listening" />
+        </LinearLayout>
+    </com.dd.ShadowLayout>
+</FrameLayout>

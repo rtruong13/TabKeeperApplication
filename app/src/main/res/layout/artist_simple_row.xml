@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:id="@+id/rowLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.alexzh.circleimageview.CircleImageView
+        android:id="@+id/foundArtistImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_group"
+        android:background="@android:color/transparent"
+        app:view_borderWidth="1dp"
+        app:view_selectedColor="@color/colorAccentTransparent"
+        app:view_borderColor="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/foundArtistName"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"/>
+</LinearLayout>

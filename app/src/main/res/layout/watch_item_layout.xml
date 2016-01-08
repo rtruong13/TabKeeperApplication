@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:sl="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.dd.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:sl_cornerRadius="1dp"
+        app:sl_dx="2dp"
+        app:sl_dy="2dp"
+        app:sl_shadowColor="#88000000"
+        app:sl_shadowRadius="2dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/normalWatchView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/posterImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+
+                    android:layout_alignParentTop="true"
+
+                    android:paddingBottom="25dp"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/infoButton"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="20dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="20dp"
+                    android:paddingStart="7dp"
+                    android:paddingTop="20dp"
+
+                    android:text="Info"
+                    android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/seenButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="7dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="7dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+
+                    android:text="Seen"
+                    android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+            <io.codetail.widget.RevealFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/seenWatchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccentBackground"
+                    android:gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/howMuchTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text="How much\ndid you like it?"
+                        android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+                        android:textColor="@android:color/white" />
+
+                    <!-- @android:style/Widget.Holo.RatingBar.Small           @style/RatingBarStyle!-->
+
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/howMuchTextView"
+
+                        android:layout_centerHorizontal="true"
+                        android:numStars="5"
+                        android:progressDrawable="@drawable/rating_bar_selector"
+                        android:stepSize="1"
+                        sl:scale_height="50"
+                        sl:scale_left="10"
+                        sl:scale_top="30"
+                        sl:scale_width="100" />
+
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:visibility="invisible"
+                    android:id="@+id/loadingView"
+                    android:background="@color/colorAccentBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.fenjuly.mylibrary.SpinnerLoader
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+
+                        app:point_color="@android:color/white" />
+                </FrameLayout>
+                <!--</FrameLayout>-->
+            </io.codetail.widget.RevealFrameLayout>
+
+            <io.codetail.widget.RevealFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/posterWatchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccentBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <LinearLayout
+                        android:id="@+id/addPostView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginStart="30dp"
+                            android:src="@drawable/ic_add" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/infoPostView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginStart="30dp"
+                            android:src="@drawable/ic_info" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Info"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/seenPostView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginStart="30dp"
+                            android:src="@drawable/ic_check" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seen"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </io.codetail.widget.RevealFrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/newMovieWatchView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccentBackground"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    android:text="You should also like this one!"
+                    android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+                    android:textColor="@android:color/white" />
+
+                <FrameLayout
+                    android:id="@+id/newPosterAnimLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+
+                    android:layout_alignParentTop="true"
+
+                    android:paddingBottom="25dp"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+
+                    android:scaleType="fitXY">
+
+                    <ImageView
+                        android:id="@+id/newPosterImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccentBackground" />
+                </FrameLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </com.dd.ShadowLayout>
+</FrameLayout>

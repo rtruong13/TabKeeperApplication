@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e6e6e6</color>
+    <color name="colorPrimaryDark">#cacaca</color>
+    <color name="colorAccent">#e32c1e</color>
+    <color name="textColor">#313131</color>
+
+    <color name="colorAccentTransparent">#82e32c1e</color>
+    <color name="gradAccentTransparent">#bbe32c1e</color>
+    <color name="gradDarkAccentTransparent">#bb020000</color>
+
+    <color name="bottomWatchButColor">#99e32c1e</color>
+
+    <color name="colorAccentBackground">#88e32c1e</color>
+</resources>
